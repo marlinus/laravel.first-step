@@ -6,6 +6,7 @@
     {{ $css }}
   </x-slot:css>
 
+  <a href="/create">Create new one</a>
   <div class="wrapper">
     <table>
       <tr>
@@ -17,7 +18,7 @@
       </tr>
       @foreach($cities as $city)
         <tr>
-          <td>{{ $city->name }}</td>
+          <td><a href="edit/{{ $city->id }}">{{ $city->name }}</a></td>
           <td>{{ $city->country->name }}</td>
           <td>{{ $city->country_code }}</td>
           <td>{{ $city->district }}</td>
